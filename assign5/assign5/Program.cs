@@ -1,60 +1,103 @@
 ﻿using System;
+
 using System.Collections.Generic;
+
 using System.Linq;
+
 using System.Text;
+
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+
+
+namespace Assignment5b
+
 {
+
     class Program
+
     {
-        const int SIZE = 12;
 
         static void Main(string[] args)
+
         {
-            int[] arr1 = new int[100];
-            int[] fr1 = new int[100];
-            int n, i, j, ctr;
 
 
-            Console.Write("\n\nCount the frequency of each element of an array:\n");
-            Console.Write("----------------------------------------------------\n");
 
-            Console.Write("Input the number of elements to be stored in the array :");
-            n = Convert.ToInt32(Console.ReadLine());
+            Program a = new Program();
 
-            Console.Write("Input {0} elements in the array :\n", n);
-            for (i = 0; i < n; i++)
-            {
-                Console.Write("element - {0} : ", i);
-                arr1[i] = Convert.ToInt32(Console.ReadLine());
-                fr1[i] = -1;
-            }
-            for (i = 0; i < n; i++)
-            {
-                ctr = 1;
-                for (j = i + 1; j < n; j++)
-                {
-                    if (arr1[i] == arr1[j])
-                    {
-                        ctr++;
-                        fr1[j] = 0;
-                    }
-                }
 
-                if (fr1[i] != 0)
-                {
-                    fr1[i] = ctr;
-                }
-            }
-            Console.Write("\nThe frequency of all elements of the array : \n");
-            for (i = 0; i < n; i++)
-            {
-                if (fr1[i] == 3)
-                {
-                    Console.Write("{0} occurs {1} times\n", arr1[i], fr1[i]);
-                }
-            }
+
+            Console.WriteLine("the longest word is : ");
+
+
+
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+
+
+
+            Console.ReadLine();
+
         }
+
+
+
+        public String MyFunctionA(string input)
+
+        {
+
+            string[] words = input.Split(' ');
+
+
+
+            int wordArrayLength = words.Length;
+
+
+
+            int[] wordsLength = new int[wordArrayLength];
+
+
+
+            foreach (var word in words)
+
+            {
+
+
+
+            }
+
+
+
+            string currentWord = words[0];
+
+
+
+            string nextWord;
+
+
+
+            for (int y = 0; y < words.Length - 1; y++)
+
+            {
+
+                currentWord = words[y];
+
+
+
+                nextWord = words[y + 1];
+
+
+
+            }
+
+
+
+            return currentWord;
+
+        }
+
+
+
     }
+
 }
